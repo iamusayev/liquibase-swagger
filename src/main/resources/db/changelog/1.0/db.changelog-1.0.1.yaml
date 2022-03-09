@@ -16,9 +16,6 @@ databaseChangeLog:
                   name: PASSPORT;
                   type: varchar(16)
               - column:
-                  name : LASTNAME
-                  type: varchar(256)
-              - column:
                   name: foreign_key
                   type: bigint
                   constraints:
