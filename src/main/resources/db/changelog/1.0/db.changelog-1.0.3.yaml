@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert column in employee table
+      author: Musayev Anar
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: NAME
+                  value: Ali
+              - column:
+                  name: SURNAME
+                  value: Aliyev
+              - column:
+                  name: AGE
+                  value: 23
+            tableName: employee

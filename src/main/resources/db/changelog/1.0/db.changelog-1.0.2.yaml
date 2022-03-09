@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: update-employee
+      author: Musayev Anar
+      changes:
+        - update:
+            columns:
+              - column:
+                  name: name
+                  value: Samir
+            tableName: employee
+            where: id=1
+

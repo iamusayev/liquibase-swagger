@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create employee table
+      author: Musayev Anar
+      changes:
+        - createTable:
+            tableName: employee
+            columns:
+              - column:
+                  name: ID
+                  type : bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: NAME
+                  type: varchar(256)
+              - column:
+                  name: SURNAME
+                  type: varchar(256)
+              - column:
+                  name : AGE
+                  type: int
+              - column:
+                  name: CREATED_AT
+                  type: timestamp
+                  defaultValue: now()
+              - column:
+                  name: STATUS
+                  type: varchar(64)

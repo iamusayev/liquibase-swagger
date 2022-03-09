@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create table for passport with fk
+      author: Musayev Anar
+      changes:
+        - createTable:
+            tableName: document
+            columns:
+              - column:
+                  name: ID
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+              - column:
+                  name: PASSPORT;
+                  type: varchar(16)
+              - column:
+                  name : LASTNAME
+                  type: varchar(256)
+              - column:
+                  name: foreign_key
+                  type: bigint
+                  constraints:
+                    foreignKeyName: EMPLOYEE_PASSPORT_FK
+                    referencedColumnNames: ID
+                    referencedTableName: employee
