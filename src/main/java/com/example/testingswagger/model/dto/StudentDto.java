@@ -20,4 +20,6 @@ public class StudentDto {
     @Schema(hidden = true)
     private Integer age;
 
+    private Long id;
+
 }
