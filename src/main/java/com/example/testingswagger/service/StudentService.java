@@ -33,7 +33,7 @@ public class StudentService {
 
         repository.save(StudentMapper.mapDtoToEntity(dto));
 
-        log.info("ActionLog.creatStudent.end id : {}", dto.getId());
+        log.info("ActionLog.creatStudent.success id : {}", dto.getId());
     }
 
     public StudentDto getStudent(Long id) {
@@ -41,7 +41,7 @@ public class StudentService {
 
         StudentDto dto = StudentMapper.mapEntityToDto(fetchStudentIfExist(id));
 
-        log.info("ActionLog.getStudent.end id: {}", id);
+        log.info("ActionLog.getStudent.success id: {}", id);
 
         return dto;
     }
@@ -56,7 +56,7 @@ public class StudentService {
                 .map(StudentMapper::mapEntityToDto)
                 .collect(Collectors.toList());
 
-        log.info("ActionLog.getStudents.end");
+        log.info("ActionLog.getStudents.success");
         return dtos;
     }
 
@@ -68,7 +68,7 @@ public class StudentService {
         entity.setStatus(Status.REMOVED);
         repository.save(entity);
 
-        log.info("ActionLog.deleteStudent.end id: {}", id);
+        log.info("ActionLog.deleteStudent.success id: {}", id);
     }
 
 
@@ -81,7 +81,7 @@ public class StudentService {
         entity.setAge(dto.getAge());
         repository.save(entity);
 
-        log.info("ActionLog.updateStudent.end id: {}", id);
+        log.info("ActionLog.updateStudent.success id: {}", id);
     }
 
 
@@ -92,7 +92,7 @@ public class StudentService {
         entity.setName(name);
         repository.save(entity);
 
-        log.info("ActionLog.updateStudentName.end id: {}", id);
+        log.info("ActionLog.updateStudentName.success id: {}", id);
     }
 
 
@@ -103,7 +103,7 @@ public class StudentService {
         entity.setSurname(surname);
         repository.save(entity);
 
-        log.info("ActionLog.updateStudentLastname.end id: {}", id);
+        log.info("ActionLog.updateStudentLastname.success id: {}", id);
     }
 
 
@@ -114,7 +114,7 @@ public class StudentService {
         entity.setAge(age);
         repository.save(entity);
 
-        log.info("ActionLog.updateStudentAge.start id: {}", id);
+        log.info("ActionLog.updateStudentAge.success id: {}", id);
     }
 
 
