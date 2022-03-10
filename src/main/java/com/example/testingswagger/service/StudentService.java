@@ -123,7 +123,7 @@ public class StudentService {
                 .findById(id)
                 .orElseThrow(() -> {
                     log.error("ActionLog.fetchStudentIfExist.error id : {}", id);
-                  throw new NotFoundException(String.format(STUDENT_NOT_FOUND_CODE, id), STUDENT_NOT_FOUND_MESSAGE);
+                    throw new NotFoundException(UNEXPECTED_EXCEPTION_CODE, UNEXPECTED_EXCEPTION_MESSAGE);
                 });
     }
 
