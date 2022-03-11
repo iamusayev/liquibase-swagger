@@ -40,7 +40,8 @@ public class StudentService {
     public StudentDto getStudent(Long id) {
         log.info("ActionLog.getStudent.start id: {}", id);
 
-        StudentDto dto = StudentMapper.mapEntityToDto(fetchStudentIfExist(id));
+        StudentEntity entity = fetchStudentIfExist(id);
+        StudentDto dto = StudentMapper.mapEntityToDto(entity);
 
         log.info("ActionLog.getStudent.success id: {}", id);
 
