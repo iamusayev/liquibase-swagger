@@ -44,7 +44,6 @@ public class StudentService {
         StudentDto dto = StudentMapper.mapEntityToDto(entity);
 
         log.info("ActionLog.getStudent.success id: {}", id);
-
         return dto;
     }
 
