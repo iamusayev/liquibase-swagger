@@ -19,14 +19,14 @@ public class ErrorHandler {
     @ExceptionHandler(Exception.class)
     @ResponseStatus(INTERNAL_SERVER_ERROR)
     public ExceptionDto handle(Exception ex) {
-        log.error("Exception", ex);
+        log.error("Exception: {}", ex);
         return new ExceptionDto(UNEXPECTED_EXCEPTION_CODE, UNEXPECTED_EXCEPTION_MESSAGE);
     }
 
     @ExceptionHandler(NotFoundException.class)
     @ResponseStatus(NOT_FOUND)
     public ExceptionDto handle(NotFoundException ex) {
-        log.error("Exception", ex);
+        log.error("Exception: {}", ex);
         return new ExceptionDto(ex.getCode(), ex.getMessage());
     }
 
