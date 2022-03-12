@@ -29,12 +29,12 @@ public class StudentService {
 
 
     public void createStudent(StudentDto dto) {
-        log.info("ActionLog.createStudent.start id : {}", dto.getId());
+        log.info("ActionLog.createStudent.start id: {}", dto.getId());
 
         StudentEntity entity = StudentMapper.mapDtoToEntity(dto);
         repository.save(entity);
 
-        log.info("ActionLog.creatStudent.success id : {}", dto.getId());
+        log.info("ActionLog.creatStudent.success id: {}", dto.getId());
     }
 
     public StudentDto getStudent(Long id) {
